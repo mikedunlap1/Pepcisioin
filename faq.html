@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pepcision FAQ — ordering, shipping, research use, COAs, and returns for research peptide laboratory orders.">
+    <title>FAQ · Pepcision</title>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&f[]=erode@500,600&f[]=jetbrains-mono@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body class="page-faq">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="age-gate" data-age-gate hidden>
+      <div class="age-gate__dialog" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-copy">
+        <p class="eyebrow">Pepcision · Access check</p>
+        <h2 id="age-gate-title">Research access only</h2>
+        <p id="age-gate-copy">This site is intended for adults 21+ who are qualified researchers purchasing materials for legitimate laboratory use.</p>
+        <label class="consent-row" for="age-confirmation">
+          <input id="age-confirmation" type="checkbox" data-age-checkbox>
+          <span>I am 21+ and a qualified researcher, and I understand these products are for research purposes only.</span>
+        </label>
+        <div class="age-gate__actions">
+          <button class="btn btn--primary" type="button" data-age-enter disabled>Enter site</button>
+          <button class="btn btn--ghost" type="button" data-age-leave>Leave</button>
+        </div>
+      </div>
+    </div>
+    <div class="site-overlay" data-site-overlay hidden></div>
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Cart preview">
+      <div class="cart-drawer__header">
+        <div>
+          <strong>Cart</strong>
+          <p>Order preview</p>
+        </div>
+        <button class="icon-button" type="button" data-cart-close aria-label="Close cart drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items>
+        <div class="empty-state">Cart is empty.</div>
+      </div>
+      <div class="cart-drawer__footer">
+        <button class="btn btn--primary btn--full" type="button">Proceed to checkout</button>
+      </div>
+    </aside>
+    <div class="site-shell" data-site-shell>
+      <div class="top-note">
+        <div class="top-note__inner">
+          <span>For laboratory research use only · Not for human, veterinary, or diagnostic use</span>
+          <span>Ships Mon–Thu · Cold chain</span>
+        </div>
+      </div>
+      <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+          <a class="brand" href="index.html" aria-label="Pepcision home">
+            <span class="brand__text">
+              <strong>Pepcision</strong>
+              <p>Precision on your peptides</p>
+            </span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+              <li><a class="site-nav__link" href="shop.html">Catalog</a></li>
+              <li><a class="site-nav__link" href="index.html#methods">Methods</a></li>
+              <li><a class="site-nav__link" href="about.html">About</a></li>
+              <li><a class="site-nav__link" href="faq.html" aria-current="page">FAQ</a></li>
+              <li><a class="site-nav__link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="site-header__actions">
+            <a class="icon-button" href="index.html#newsletter" aria-label="Account">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 12C14.7 12 17 9.7 17 7C17 4.2 14.7 2 12 2C9.2 2 7 4.2 7 7C7 9.7 9.2 12 12 12Z" stroke="currentColor" stroke-width="1.6"></path>
+                <path d="M4 21C4.8 17.8 7.6 16 12 16C16.4 16 19.2 17.8 20 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </a>
+            <button class="icon-button" type="button" data-cart-toggle aria-label="Open cart">
+              <span class="cart-count" data-cart-count hidden>0</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 5H5L7.4 15.2C7.6 16.1 8.4 16.8 9.3 16.8H17.4C18.3 16.8 19.1 16.2 19.3 15.3L21 8.5H6.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="10" cy="20" r="1" fill="currentColor"></circle>
+                <circle cx="18" cy="20" r="1" fill="currentColor"></circle>
+              </svg>
+            </button>
+            <button class="icon-button hamburger" type="button" data-mobile-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+        <ul>
+          <li><a href="shop.html">Catalog</a></li>
+          <li><a href="index.html#methods">Methods</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <main id="main-content">
+
+        <section class="hero hero--short" aria-labelledby="faq-title">
+          <div class="hero__grid">
+            <div class="hero__meta">
+              <span><strong>FAQ</strong> · 5 categories</span>
+              <span>Updated 12 May 2026</span>
+            </div>
+            <h1 class="hero__headline" id="faq-title">
+              Frequently asked.
+            </h1>
+            <div class="hero__body">
+              <p>Answers about ordering, shipping, research-use restrictions, COA access, and returns. If something here doesn't cover it, email <a class="link-inline" href="mailto:orders@pepcision.com">orders@pepcision.com</a> and we'll get back same day.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--rule">
+          <div class="faq-page">
+
+            <article class="faq-group">
+              <h2>01 · Ordering</h2>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="true" aria-controls="faq-order-1">
+                  Can I place an order without creating an account?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-order-1">
+                  Yes. Guest checkout is available for all orders. An account is only required when you want to access order history, store institutional verification on file, or set up net-30 PO terms for recurring orders above $500.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-order-2">
+                  How will I receive order confirmation?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-order-2" hidden>
+                  An email confirmation goes out immediately with the order number and itemized line items. A second email confirms dispatch with the courier tracking number, typically the next business morning. Lot numbers are listed on the dispatch email so you can match them to incoming COAs.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-order-3">
+                  Do you accept institutional purchase orders?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-order-3" hidden>
+                  Yes. POs above $500 are processed on net-30 terms after a one-time institutional verification step. Send the PO to orders@pepcision.com with the buyer contact, shipping address, and remit-to instructions.
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-group">
+              <h2>02 · Shipping</h2>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-ship-1">
+                  Do you offer expedited shipping?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-ship-1" hidden>
+                  Standard dispatch uses priority overnight on a Mon–Thu schedule, which covers most domestic addresses in 1–2 business days. Same-day courier within metro Chicago and saturday cold-chain delivery are available on request — email us before ordering for a quote.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-ship-2">
+                  How are shipping delays communicated?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-ship-2" hidden>
+                  If a courier flags a delay that pushes the package outside the 48-hour cold-pack window, you'll get a direct email from our operations lead — not an automated alert. We'll lay out the replacement-or-refund options before the package arrives, not after.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-ship-3">
+                  Do you ship internationally?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-ship-3" hidden>
+                  We ship to research institutions in Canada, the UK, and most of the EU. Customs documentation is prepared on our side, but the receiving institution is responsible for clearance and any local duties. We do not ship to private residences outside the US.
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-group">
+              <h2>03 · Research use</h2>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-research-1">
+                  What does "research use only" mean in practice?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-research-1" hidden>
+                  Products are supplied for in vitro laboratory research only. They are not formulated, tested, or approved for human, veterinary, clinical, diagnostic, or therapeutic use. Pepcision makes no claims, implicit or otherwise, about safety or efficacy outside a controlled laboratory setting.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-research-2">
+                  Who is permitted to purchase?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-research-2" hidden>
+                  Qualified researchers affiliated with a recognized academic, industrial, or independent research operation. First orders go through a brief verification step — typically an institutional email address, a published affiliation, or a short conversation about the research context. We don't sell to individuals we can't verify.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-research-3">
+                  Why the age gate at the entrance?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-research-3" hidden>
+                  The 21+ check is the first layer of access control. It establishes that the visitor affirms they are of age and acting as a qualified researcher before viewing catalog detail. It is not a substitute for our institutional verification, which happens at checkout for first-time orders.
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-group">
+              <h2>04 · COAs &amp; documentation</h2>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-coa-1">
+                  Where do I find the COA for my lot?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-coa-1" hidden>
+                  Each product detail page has a Documentation tab linking the lot-specific COA, HPLC chromatogram, and mass spectrum. The lot number on your vial maps directly to the document on file. The dispatch email also includes a deep link to the matching COA.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-coa-2">
+                  Are COAs lot-specific or generic?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-coa-2" hidden>
+                  Lot-specific. Every COA references one lot's actual HPLC trace, integrated purity value, observed mass, and synthesis date. We do not publish averaged or representative documents. If your lot number is on the vial and not on the document, it's not the right COA.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-coa-3">
+                  Can I get documentation for an older lot I bought previously?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-coa-3" hidden>
+                  Yes. We retain lot records indefinitely. Email orders@pepcision.com with the lot number printed on your vial and we'll send the archived COA the same business day.
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-group">
+              <h2>05 · Returns &amp; issues</h2>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-return-1">
+                  What is the return policy?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-return-1" hidden>
+                  Because these are temperature-sensitive research materials, we cannot accept returns once a shipment has been opened or the cold chain has been broken on the buyer's end. We do replace or refund any lot that arrives compromised, mislabeled, or out of spec — see the next item.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-return-2">
+                  How are order issues handled?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-return-2" hidden>
+                  If a shipment arrives outside the 48-hour cold window, the ice packs are fully thawed, the vial is damaged, or the lot fails to match the documented spec, photograph the package on receipt and email us within 24 hours. We dispatch a replacement same-day where stock allows, or refund in full.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="faq-return-3">
+                  What if I ordered the wrong peptide?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+                </button>
+                <div class="accordion__panel" id="faq-return-3" hidden>
+                  Email us before the dispatch confirmation goes out and we can swap the line item or cancel the order. Once an order has shipped, we can't accept a return on a temperature-sensitive product, but we'll work with you on a discount for the replacement order if the error is on the ordering side.
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Contact CTA — flush newsletter pattern reused -->
+        <section>
+          <div class="newsletter">
+            <div class="newsletter__copy">
+              <p class="eyebrow">Still stuck</p>
+              <h2>Email us directly. Answers come from a human, same day.</h2>
+              <p>No ticket queue. Operational and technical questions land in the same inbox as the order desk.</p>
+            </div>
+            <div class="newsletter-form" style="grid-template-columns: 1fr;">
+              <a class="btn btn--invert" href="mailto:orders@pepcision.com">orders@pepcision.com</a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+      <footer class="footer" id="contact">
+        <div class="footer__inner">
+          <div class="footer__grid">
+            <div>
+              <h2>Pepcision</h2>
+              <p>Research peptides for laboratory use. Documented, lot-traceable, cold-chained.</p>
+              <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55);">orders@pepcision.com</p>
+            </div>
+            <div class="footer-links">
+              <h3>Catalog</h3>
+              <ul>
+                <li><a href="shop.html">All products</a></li>
+                <li><a href="shop.html">Healing</a></li>
+                <li><a href="shop.html">Secretagogues</a></li>
+                <li><a href="shop.html">Mitochondrial</a></li>
+                <li><a href="shop.html">Copper peptides</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="shipping.html">Shipping</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="shipping.html">Shipping policy</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>For laboratory research use only. Not for human, veterinary, or diagnostic use.</p>
+            <p>© 2026 Pepcision · By entering you affirm you are 21+ and a qualified researcher.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

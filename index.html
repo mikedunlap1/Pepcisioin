@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pepcision supplies research peptides to laboratories with documented purity, batch-level COAs, and cold-chain logistics.">
+    <title>Pepcision — Research Peptides for Laboratory Use</title>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&f[]=erode@500,600&f[]=jetbrains-mono@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body class="page-home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="age-gate" data-age-gate hidden>
+      <div class="age-gate__dialog" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-copy">
+        <p class="eyebrow">Pepcision · Access check</p>
+        <h2 id="age-gate-title">Research access only</h2>
+        <p id="age-gate-copy">This site is intended for adults 21+ who are qualified researchers purchasing materials for legitimate laboratory use. Entry confirms you understand the research-only restrictions shown throughout the site.</p>
+        <label class="consent-row" for="age-confirmation">
+          <input id="age-confirmation" type="checkbox" data-age-checkbox>
+          <span>I am 21+ and a qualified researcher, and I understand these products are for research purposes only.</span>
+        </label>
+        <div class="age-gate__actions">
+          <button class="btn btn--primary" type="button" data-age-enter disabled>Enter site</button>
+          <button class="btn btn--ghost" type="button" data-age-leave>Leave</button>
+        </div>
+      </div>
+    </div>
+    <div class="site-overlay" data-site-overlay hidden></div>
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Cart preview">
+      <div class="cart-drawer__header">
+        <div>
+          <strong>Cart</strong>
+          <p>Order preview</p>
+        </div>
+        <button class="icon-button" type="button" data-cart-close aria-label="Close cart drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items>
+        <div class="empty-state">Cart is empty.</div>
+      </div>
+      <div class="cart-drawer__footer">
+        <div class="range-meta">
+          <strong>Subtotal</strong>
+          <strong>—</strong>
+        </div>
+        <button class="btn btn--primary btn--full" type="button">Proceed to checkout</button>
+      </div>
+    </aside>
+    <div class="site-shell" data-site-shell>
+      <div class="top-note">
+        <div class="top-note__inner">
+          <span>For laboratory research use only · Not for human, veterinary, or diagnostic use</span>
+          <span>Ships Mon–Thu · Cold chain</span>
+        </div>
+      </div>
+      <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+          <a class="brand" href="index.html" aria-label="Pepcision home">
+            <span class="brand__text">
+              <strong>Pepcision</strong>
+              <p>Precision on your peptides</p>
+            </span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+              <li><a class="site-nav__link" href="shop.html">Catalog</a></li>
+              <li><a class="site-nav__link" href="#methods">Methods</a></li>
+              <li><a class="site-nav__link" href="about.html">About</a></li>
+              <li><a class="site-nav__link" href="faq.html">FAQ</a></li>
+              <li><a class="site-nav__link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="site-header__actions">
+            <a class="icon-button" href="#newsletter" aria-label="Account">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 12C14.7 12 17 9.7 17 7C17 4.2 14.7 2 12 2C9.2 2 7 4.2 7 7C7 9.7 9.2 12 12 12Z" stroke="currentColor" stroke-width="1.6"></path>
+                <path d="M4 21C4.8 17.8 7.6 16 12 16C16.4 16 19.2 17.8 20 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </a>
+            <button class="icon-button" type="button" data-cart-toggle aria-label="Open cart">
+              <span class="cart-count" data-cart-count hidden>0</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 5H5L7.4 15.2C7.6 16.1 8.4 16.8 9.3 16.8H17.4C18.3 16.8 19.1 16.2 19.3 15.3L21 8.5H6.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="10" cy="20" r="1" fill="currentColor"></circle>
+                <circle cx="18" cy="20" r="1" fill="currentColor"></circle>
+              </svg>
+            </button>
+            <button class="icon-button hamburger" type="button" data-mobile-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+        <ul>
+          <li><a href="shop.html">Catalog</a></li>
+          <li><a href="#methods">Methods</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-nav__footer">
+          <p>For laboratory research use only</p>
+        </div>
+      </nav>
+      <main id="main-content">
+
+        <!-- HERO — asymmetric, oversized -->
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero__grid">
+            <div class="hero__meta">
+              <span><strong>Issue 01</strong> · Catalog 2026</span>
+              <span>Last revised — Apr 2026</span>
+            </div>
+            <h1 class="hero__headline" id="hero-title">
+              Research-grade<br>peptides,<br><em>documented</em>.
+            </h1>
+            <div class="hero__body">
+              <p>Pepcision supplies lyophilized research peptides to academic and industrial laboratories. Every lot ships with a third-party COA, HPLC purity trace, and mass-spec confirmation — referenced by lot number, not aggregate claim.</p>
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="shop.html">Browse catalog</a>
+                <a class="btn btn--ghost" href="product.html#coa-panel">View a sample COA</a>
+              </div>
+            </div>
+            <div class="hero__sidebar" aria-label="At a glance">
+              <div>
+                <strong>≥ 98% HPLC</strong>
+                <span>Standard purity floor across catalog</span>
+              </div>
+              <div>
+                <strong>24-hr dispatch</strong>
+                <span>Orders before 14:00 CT, in-stock items</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SPEC STRIP — real numbers, not generic icons -->
+        <section class="spec-strip" aria-label="Operational specifications">
+          <div class="spec-strip__inner">
+            <div class="spec-strip__cell">
+              <span class="spec-strip__label">Purity floor</span>
+              <span class="spec-strip__value">98.0%</span>
+              <span class="spec-strip__note">Verified by reverse-phase HPLC</span>
+            </div>
+            <div class="spec-strip__cell">
+              <span class="spec-strip__label">Documentation</span>
+              <span class="spec-strip__value">Lot-level</span>
+              <span class="spec-strip__note">COA, HPLC trace, MS confirmation</span>
+            </div>
+            <div class="spec-strip__cell">
+              <span class="spec-strip__label">Cold chain</span>
+              <span class="spec-strip__value">−20 °C</span>
+              <span class="spec-strip__note">Insulated, 48-hr ice-pack window</span>
+            </div>
+            <div class="spec-strip__cell">
+              <span class="spec-strip__label">Dispatch</span>
+              <span class="spec-strip__value">≤ 24 hr</span>
+              <span class="spec-strip__note">For in-stock items, Mon–Thu</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CATALOG FEATURE — editorial split, real product names + table -->
+        <section class="section section--loose" id="research">
+          <div class="catalog-feature">
+            <p class="section-label"><span class="section-label__num">01</span>From the catalog</p>
+          </div>
+          <div class="catalog-feature">
+            <div class="catalog-feature__heading">
+              <h2>Stock peptides, ordered by use case.</h2>
+            </div>
+            <div class="catalog-feature__intro">
+              <p>The full catalog spans 40+ research peptides across healing, secretagogue, mitochondrial, and neurochemistry lines. Below: a handful currently moving fastest with PIs we work with.</p>
+              <p><a class="link-arrow" href="shop.html">See all 40+ in stock</a></p>
+            </div>
+          </div>
+
+          <div class="product-row">
+            <article class="product-card product-card--feature product-row__hero">
+              <div class="product-card__image">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80" alt="Lyophilized peptide vial under laboratory lighting">
+              </div>
+              <div class="product-card__content">
+                <span class="product-card__lot">Lot PCN-2604 · Healing line</span>
+                <h3>BPC-157 · 5 mg lyophilized</h3>
+                <p>Reverse-phase HPLC purity 99.1%. Mass-spec confirmed against theoretical 1419.5 Da.</p>
+                <div class="product-card__meta">
+                  <span class="price">$44.00</span>
+                  <button class="product-card__cta" type="button" data-add-to-cart data-product-name="BPC-157 — 5 mg" data-product-price="$44.00">Add to order →</button>
+                </div>
+              </div>
+            </article>
+
+            <div class="product-row__side">
+              <article class="product-card product-card--horizontal">
+                <div class="product-card__image">
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=80" alt="Sterile vial set">
+                </div>
+                <div class="product-card__content">
+                  <span class="product-card__lot">Lot PCN-2598 · Recovery</span>
+                  <h3>TB-500 · 5 mg</h3>
+                  <p>Purity 98.7% HPLC.</p>
+                  <div class="product-card__meta">
+                    <span class="price">$49.00</span>
+                    <button class="product-card__cta" type="button" data-add-to-cart data-product-name="TB-500 — 5 mg" data-product-price="$49.00">Add →</button>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card product-card--horizontal">
+                <div class="product-card__image">
+                  <img loading="lazy" src="https://images.unsplash.com/photo-1583912086296-be5d4f7a0f4b?auto=format&fit=crop&w=900&q=80" alt="Pipette and reagent setup">
+                </div>
+                <div class="product-card__content">
+                  <span class="product-card__lot">Lot PCN-2611 · Secretagogue</span>
+                  <h3>CJC-1295 · 2 mg</h3>
+                  <p>Purity 98.4% HPLC. No DAC.</p>
+                  <div class="product-card__meta">
+                    <span class="price">$58.00</span>
+                    <button class="product-card__cta" type="button" data-add-to-cart data-product-name="CJC-1295 — 2 mg" data-product-price="$58.00">Add →</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Catalog index table — real data, not card grid -->
+          <div class="catalog-index" style="margin-top: 4.5rem;">
+            <div class="catalog-index__header">
+              <h2>Current stock — featured</h2>
+              <span class="catalog-index__updated">Updated 12 May 2026</span>
+            </div>
+            <table class="catalog-table" aria-label="Featured stock table">
+              <thead>
+                <tr>
+                  <th scope="col">Peptide</th>
+                  <th scope="col">Purity</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col" style="text-align:right;">Price</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-name">BPC-157</td>
+                  <td class="col-purity" data-label="Purity">99.1%</td>
+                  <td class="col-size" data-label="Size">5 mg</td>
+                  <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                  <td class="col-price" data-label="Price">$44.00</td>
+                  <td class="col-action"><a class="link-inline" href="product.html">Details</a></td>
+                </tr>
+                <tr>
+                  <td class="col-name">TB-500</td>
+                  <td class="col-purity" data-label="Purity">98.7%</td>
+                  <td class="col-size" data-label="Size">5 mg</td>
+                  <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                  <td class="col-price" data-label="Price">$49.00</td>
+                  <td class="col-action"><a class="link-inline" href="product.html">Details</a></td>
+                </tr>
+                <tr>
+                  <td class="col-name">Ipamorelin</td>
+                  <td class="col-purity" data-label="Purity">98.9%</td>
+                  <td class="col-size" data-label="Size">5 mg</td>
+                  <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                  <td class="col-price" data-label="Price">$41.00</td>
+                  <td class="col-action"><a class="link-inline" href="product.html">Details</a></td>
+                </tr>
+                <tr>
+                  <td class="col-name">CJC-1295 (no DAC)</td>
+                  <td class="col-purity" data-label="Purity">98.4%</td>
+                  <td class="col-size" data-label="Size">2 mg</td>
+                  <td class="col-stock" data-label="Stock"><span class="stock-dot stock-dot--low"></span>Low stock</td>
+                  <td class="col-price" data-label="Price">$58.00</td>
+                  <td class="col-action"><a class="link-inline" href="product.html">Details</a></td>
+                </tr>
+                <tr>
+                  <td class="col-name">MOTS-c</td>
+                  <td class="col-purity" data-label="Purity">98.2%</td>
+                  <td class="col-size" data-label="Size">10 mg</td>
+                  <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                  <td class="col-price" data-label="Price">$72.00</td>
+                  <td class="col-action"><a class="link-inline" href="product.html">Details</a></td>
+                </tr>
+                <tr>
+                  <td class="col-name">GHK-Cu</td>
+                  <td class="col-purity" data-label="Purity">99.0%</td>
+                  <td class="col-size" data-label="Size">50 mg</td>
+                  <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                  <td class="col-price" data-label="Price">$63.00</td>
+                  <td class="col-action"><a class="link-inline" href="product.html">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- METHODS — numbered editorial list, replaces 3-card grid -->
+        <section class="section section--alt section--rule" id="methods">
+          <div class="container">
+            <p class="section-label"><span class="section-label__num">02</span>Methods</p>
+            <div class="grid-12" style="row-gap: var(--space-6);">
+              <div style="grid-column: 1 / 8;">
+                <h2 style="font-size: clamp(2rem, 4.5vw, 3.25rem); margin: 0;">What goes into a Pepcision lot before it ships.</h2>
+              </div>
+              <div style="grid-column: 9 / 13; align-self: end;">
+                <p class="text-muted">A four-step process from synthesis to dispatch. We document each step; the lot number on the vial maps to the record in our QC log.</p>
+              </div>
+            </div>
+
+            <ol class="editorial-list" style="margin-top: var(--space-7);">
+              <li>
+                <h3>Solid-phase synthesis</h3>
+                <p>Each peptide is synthesized via Fmoc-based SPPS at an audited contract facility. Synthesis records — resin, scale, coupling reagents — are filed against the lot.</p>
+              </li>
+              <li>
+                <h3>Reverse-phase HPLC purification &amp; analysis</h3>
+                <p>Crude product is purified by preparative HPLC and re-analyzed on an analytical column. We publish the chromatogram and integrated purity for the exact lot in your shipment.</p>
+              </li>
+              <li>
+                <h3>Mass-spec confirmation</h3>
+                <p>ESI or MALDI mass spectrometry confirms the observed monoisotopic mass against theoretical. Both values appear on the COA. Mismatch = lot is rejected.</p>
+              </li>
+              <li>
+                <h3>Lyophilization, packaging, cold dispatch</h3>
+                <p>Lyophilized into amber vials under sterile conditions, packed with two ice packs and an insulated liner, and routed via priority overnight. Dispatch window: Mon–Thu only.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- COMPLIANCE BAND — flush, hairline-bound -->
+        <section class="compliance-band">
+          <div class="compliance-band__inner">
+            <div class="compliance-band__label">Compliance</div>
+            <div class="compliance-band__body">
+              <h2>Research-use restriction is non-negotiable.</h2>
+              <p>Pepcision products are sold for in vitro laboratory research only. Not for human consumption. Not for veterinary, clinical, diagnostic, or therapeutic use. We do not sell to individuals not affiliated with a recognized research institution or independent research operation. Account verification may be requested for first orders.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ — asymmetric two-column -->
+        <section class="section section--loose">
+          <div class="container">
+            <p class="section-label"><span class="section-label__num">03</span>Frequently asked</p>
+          </div>
+          <div class="faq-block" style="margin-top: var(--space-4);">
+            <div class="faq-block__intro">
+              <h2>Questions we hear from PIs and lab managers.</h2>
+              <p>For ordering, customs, COAs, and storage. <a class="link-inline" href="faq.html">See the full FAQ.</a></p>
+            </div>
+            <div class="faq-block__list">
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="true" aria-controls="home-faq-1">
+                  What does "research use only" mean in practice?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <div class="accordion__panel" id="home-faq-1">
+                  Products and content are presented for in vitro laboratory research settings only. Pepcision does not make any claim — implicit or otherwise — about safety or efficacy for human, veterinary, or diagnostic use.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="home-faq-2">
+                  Where do COAs live?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <div class="accordion__panel" id="home-faq-2" hidden>
+                  Every product detail page has a Documentation tab linking the lot-specific COA, HPLC chromatogram, and mass spectrum. Archived lots are retrievable on request via the contact form.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="home-faq-3">
+                  How do you handle cold-chain failures?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <div class="accordion__panel" id="home-faq-3" hidden>
+                  If a shipment arrives outside the 48-hour cold window or the ice packs have fully thawed, photograph the package on receipt and contact us within 24 hours. Replacement lots are shipped same-day where stock allows.
+                </div>
+              </div>
+              <div class="accordion">
+                <button class="accordion__button" type="button" data-accordion-button aria-expanded="false" aria-controls="home-faq-4">
+                  Do you accept institutional POs?
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+                <div class="accordion__panel" id="home-faq-4" hidden>
+                  Yes. POs above $500 are processed on net-30 terms after a one-time institutional verification step. Send the PO to orders@pepcision.com with the buyer contact and shipping address.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NEWSLETTER — flush underline form -->
+        <section id="newsletter">
+          <div class="newsletter">
+            <div class="newsletter__copy">
+              <p class="eyebrow">Memo</p>
+              <h2>A short monthly note on new lots, methods updates, and back-in-stock peptides.</h2>
+              <p>No marketing. Roughly one email per month. Unsubscribe via the footer of any issue.</p>
+            </div>
+            <form class="newsletter-form" data-newsletter-form>
+              <div class="field">
+                <label for="newsletter-email">Work email</label>
+                <input id="newsletter-email" type="email" name="email" placeholder="researcher@lab.edu" required>
+              </div>
+              <button class="btn btn--invert" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer" id="contact">
+        <div class="footer__inner">
+          <div class="footer__grid">
+            <div>
+              <h2>Pepcision</h2>
+              <p>Research peptides for laboratory use. Documented, lot-traceable, cold-chained.</p>
+              <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55);">orders@pepcision.com</p>
+            </div>
+            <div class="footer-links">
+              <h3>Catalog</h3>
+              <ul>
+                <li><a href="shop.html">All products</a></li>
+                <li><a href="shop.html">Healing</a></li>
+                <li><a href="shop.html">Secretagogues</a></li>
+                <li><a href="shop.html">Mitochondrial</a></li>
+                <li><a href="shop.html">Copper peptides</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="shipping.html">Shipping</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="shipping.html">Shipping policy</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>For laboratory research use only. Not for human, veterinary, or diagnostic use.</p>
+            <p>© 2026 Pepcision · By entering you affirm you are 21+ and a qualified researcher.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

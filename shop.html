@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the Pepcision research peptide catalog with purity, lot, and stock data per item.">
+    <title>Catalog · Pepcision</title>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&f[]=erode@500,600&f[]=jetbrains-mono@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body class="page-shop">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="age-gate" data-age-gate hidden>
+      <div class="age-gate__dialog" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-copy">
+        <p class="eyebrow">Pepcision · Access check</p>
+        <h2 id="age-gate-title">Research access only</h2>
+        <p id="age-gate-copy">This site is intended for adults 21+ who are qualified researchers purchasing materials for legitimate laboratory use.</p>
+        <label class="consent-row" for="age-confirmation">
+          <input id="age-confirmation" type="checkbox" data-age-checkbox>
+          <span>I am 21+ and a qualified researcher, and I understand these products are for research purposes only.</span>
+        </label>
+        <div class="age-gate__actions">
+          <button class="btn btn--primary" type="button" data-age-enter disabled>Enter site</button>
+          <button class="btn btn--ghost" type="button" data-age-leave>Leave</button>
+        </div>
+      </div>
+    </div>
+    <div class="site-overlay" data-site-overlay hidden></div>
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Cart preview">
+      <div class="cart-drawer__header">
+        <div>
+          <strong>Cart</strong>
+          <p>Order preview</p>
+        </div>
+        <button class="icon-button" type="button" data-cart-close aria-label="Close cart drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items>
+        <div class="empty-state">Cart is empty.</div>
+      </div>
+      <div class="cart-drawer__footer">
+        <div class="range-meta">
+          <strong>Subtotal</strong>
+          <strong>—</strong>
+        </div>
+        <button class="btn btn--primary btn--full" type="button">Proceed to checkout</button>
+      </div>
+    </aside>
+    <div class="site-shell" data-site-shell>
+      <div class="top-note">
+        <div class="top-note__inner">
+          <span>For laboratory research use only · Not for human, veterinary, or diagnostic use</span>
+          <span>Ships Mon–Thu · Cold chain</span>
+        </div>
+      </div>
+      <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+          <a class="brand" href="index.html" aria-label="Pepcision home">
+            <span class="brand__text">
+              <strong>Pepcision</strong>
+              <p>Precision on your peptides</p>
+            </span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+              <li><a class="site-nav__link" href="shop.html" aria-current="page">Catalog</a></li>
+              <li><a class="site-nav__link" href="index.html#methods">Methods</a></li>
+              <li><a class="site-nav__link" href="about.html">About</a></li>
+              <li><a class="site-nav__link" href="faq.html">FAQ</a></li>
+              <li><a class="site-nav__link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="site-header__actions">
+            <a class="icon-button" href="index.html#newsletter" aria-label="Account">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 12C14.7 12 17 9.7 17 7C17 4.2 14.7 2 12 2C9.2 2 7 4.2 7 7C7 9.7 9.2 12 12 12Z" stroke="currentColor" stroke-width="1.6"></path>
+                <path d="M4 21C4.8 17.8 7.6 16 12 16C16.4 16 19.2 17.8 20 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </a>
+            <button class="icon-button" type="button" data-cart-toggle aria-label="Open cart">
+              <span class="cart-count" data-cart-count hidden>0</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 5H5L7.4 15.2C7.6 16.1 8.4 16.8 9.3 16.8H17.4C18.3 16.8 19.1 16.2 19.3 15.3L21 8.5H6.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="10" cy="20" r="1" fill="currentColor"></circle>
+                <circle cx="18" cy="20" r="1" fill="currentColor"></circle>
+              </svg>
+            </button>
+            <button class="icon-button hamburger" type="button" data-mobile-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+        <ul>
+          <li><a href="shop.html">Catalog</a></li>
+          <li><a href="index.html#methods">Methods</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-nav__footer">
+          <p>For laboratory research use only</p>
+        </div>
+      </nav>
+      <main id="main-content">
+
+        <!-- HERO — short, asymmetric -->
+        <section class="hero hero--short" aria-labelledby="shop-title">
+          <div class="hero__grid">
+            <div class="hero__meta">
+              <span><strong>Catalog</strong> · 40+ active SKUs</span>
+              <span>Updated 12 May 2026</span>
+            </div>
+            <h1 class="hero__headline" id="shop-title">
+              The catalog.
+            </h1>
+            <div class="hero__body">
+              <p>Filter by category, peptide family, or price. Every line lists purity, lot, and current stock. Click through for the lot-specific COA, HPLC trace, and storage notes.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CATALOG — sidebar + table -->
+        <section>
+          <div class="catalog-layout">
+            <aside class="filter-card" aria-labelledby="filters-title">
+              <h2 id="filters-title">Filter</h2>
+              <div class="field">
+                <label for="sort-products">Sort</label>
+                <select id="sort-products" name="sort">
+                  <option>Featured</option>
+                  <option>Newest</option>
+                  <option>Price ascending</option>
+                  <option>Price descending</option>
+                  <option>Purity</option>
+                </select>
+              </div>
+              <div>
+                <span class="filter-section-label" style="display:block; margin-bottom: 0.8rem;">Category</span>
+                <ul class="filter-list">
+                  <li><label class="checkbox-row"><input type="checkbox" checked> Healing &amp; recovery</label></li>
+                  <li><label class="checkbox-row"><input type="checkbox"> Secretagogues</label></li>
+                  <li><label class="checkbox-row"><input type="checkbox"> Mitochondrial</label></li>
+                  <li><label class="checkbox-row"><input type="checkbox"> Copper peptides</label></li>
+                  <li><label class="checkbox-row"><input type="checkbox"> Neurochemistry</label></li>
+                </ul>
+              </div>
+              <div class="range-field">
+                <label for="shop-range">Max price</label>
+                <input id="shop-range" type="range" min="20" max="150" value="90" data-range-input>
+                <div class="range-meta">
+                  <span>$20</span>
+                  <strong data-range-output="shop-range">$90</strong>
+                </div>
+              </div>
+              <div>
+                <span class="filter-section-label" style="display:block; margin-bottom: 0.8rem;">Purity</span>
+                <ul class="filter-list">
+                  <li><label class="checkbox-row"><input type="checkbox" checked> ≥ 98%</label></li>
+                  <li><label class="checkbox-row"><input type="checkbox"> ≥ 99%</label></li>
+                </ul>
+              </div>
+            </aside>
+
+            <div>
+              <div class="catalog-index__header">
+                <h2>12 in stock</h2>
+                <span class="catalog-index__updated">Sorted · featured</span>
+              </div>
+              <table class="catalog-table" aria-label="Catalog">
+                <thead>
+                  <tr>
+                    <th scope="col">Peptide</th>
+                    <th scope="col">Purity</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col" style="text-align:right;">Price</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-name">BPC-157</td>
+                    <td class="col-purity" data-label="Purity">99.1%</td>
+                    <td class="col-size" data-label="Size">5 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$44.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">TB-500</td>
+                    <td class="col-purity" data-label="Purity">98.7%</td>
+                    <td class="col-size" data-label="Size">5 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$49.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">CJC-1295 (no DAC)</td>
+                    <td class="col-purity" data-label="Purity">98.4%</td>
+                    <td class="col-size" data-label="Size">2 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot stock-dot--low"></span>Low stock</td>
+                    <td class="col-price" data-label="Price">$58.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">Ipamorelin</td>
+                    <td class="col-purity" data-label="Purity">98.9%</td>
+                    <td class="col-size" data-label="Size">5 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$41.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">MOTS-c</td>
+                    <td class="col-purity" data-label="Purity">98.2%</td>
+                    <td class="col-size" data-label="Size">10 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$72.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">GHK-Cu</td>
+                    <td class="col-purity" data-label="Purity">99.0%</td>
+                    <td class="col-size" data-label="Size">50 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$63.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">Selank</td>
+                    <td class="col-purity" data-label="Purity">98.6%</td>
+                    <td class="col-size" data-label="Size">10 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$55.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">Semax</td>
+                    <td class="col-purity" data-label="Purity">98.5%</td>
+                    <td class="col-size" data-label="Size">10 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$57.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">Epitalon</td>
+                    <td class="col-purity" data-label="Purity">98.8%</td>
+                    <td class="col-size" data-label="Size">10 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot stock-dot--low"></span>Low stock</td>
+                    <td class="col-price" data-label="Price">$64.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">NAD+</td>
+                    <td class="col-purity" data-label="Purity">99.3%</td>
+                    <td class="col-size" data-label="Size">500 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$89.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">Thymosin Alpha-1</td>
+                    <td class="col-purity" data-label="Purity">98.3%</td>
+                    <td class="col-size" data-label="Size">10 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot stock-dot--out"></span>Out of stock</td>
+                    <td class="col-price" data-label="Price">$78.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">Notify</a></td>
+                  </tr>
+                  <tr>
+                    <td class="col-name">KPV</td>
+                    <td class="col-purity" data-label="Purity">98.7%</td>
+                    <td class="col-size" data-label="Size">5 mg</td>
+                    <td class="col-stock" data-label="Stock"><span class="stock-dot"></span>In stock</td>
+                    <td class="col-price" data-label="Price">$38.00</td>
+                    <td class="col-action"><a class="link-inline" href="product.html">View</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+      <footer class="footer" id="contact">
+        <div class="footer__inner">
+          <div class="footer__grid">
+            <div>
+              <h2>Pepcision</h2>
+              <p>Research peptides for laboratory use. Documented, lot-traceable, cold-chained.</p>
+              <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55);">orders@pepcision.com</p>
+            </div>
+            <div class="footer-links">
+              <h3>Catalog</h3>
+              <ul>
+                <li><a href="shop.html">All products</a></li>
+                <li><a href="shop.html">Healing</a></li>
+                <li><a href="shop.html">Secretagogues</a></li>
+                <li><a href="shop.html">Mitochondrial</a></li>
+                <li><a href="shop.html">Copper peptides</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="shipping.html">Shipping</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="shipping.html">Shipping policy</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>For laboratory research use only. Not for human, veterinary, or diagnostic use.</p>
+            <p>© 2026 Pepcision · By entering you affirm you are 21+ and a qualified researcher.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

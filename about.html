@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Pepcision — sourcing, lab standards, and the team behind a documentation-first peptide supplier.">
+    <title>About · Pepcision</title>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&f[]=erode@500,600&f[]=jetbrains-mono@400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body class="page-about">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="age-gate" data-age-gate hidden>
+      <div class="age-gate__dialog" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-copy">
+        <p class="eyebrow">Pepcision · Access check</p>
+        <h2 id="age-gate-title">Research access only</h2>
+        <p id="age-gate-copy">This site is intended for adults 21+ who are qualified researchers purchasing materials for legitimate laboratory use.</p>
+        <label class="consent-row" for="age-confirmation">
+          <input id="age-confirmation" type="checkbox" data-age-checkbox>
+          <span>I am 21+ and a qualified researcher, and I understand these products are for research purposes only.</span>
+        </label>
+        <div class="age-gate__actions">
+          <button class="btn btn--primary" type="button" data-age-enter disabled>Enter site</button>
+          <button class="btn btn--ghost" type="button" data-age-leave>Leave</button>
+        </div>
+      </div>
+    </div>
+    <div class="site-overlay" data-site-overlay hidden></div>
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="Cart preview">
+      <div class="cart-drawer__header">
+        <div>
+          <strong>Cart</strong>
+          <p>Order preview</p>
+        </div>
+        <button class="icon-button" type="button" data-cart-close aria-label="Close cart drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-drawer__items" data-cart-items>
+        <div class="empty-state">Cart is empty.</div>
+      </div>
+      <div class="cart-drawer__footer">
+        <button class="btn btn--primary btn--full" type="button">Proceed to checkout</button>
+      </div>
+    </aside>
+    <div class="site-shell" data-site-shell>
+      <div class="top-note">
+        <div class="top-note__inner">
+          <span>For laboratory research use only · Not for human, veterinary, or diagnostic use</span>
+          <span>Ships Mon–Thu · Cold chain</span>
+        </div>
+      </div>
+      <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+          <a class="brand" href="index.html" aria-label="Pepcision home">
+            <span class="brand__text">
+              <strong>Pepcision</strong>
+              <p>Precision on your peptides</p>
+            </span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+              <li><a class="site-nav__link" href="shop.html">Catalog</a></li>
+              <li><a class="site-nav__link" href="index.html#methods">Methods</a></li>
+              <li><a class="site-nav__link" href="about.html" aria-current="page">About</a></li>
+              <li><a class="site-nav__link" href="faq.html">FAQ</a></li>
+              <li><a class="site-nav__link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="site-header__actions">
+            <a class="icon-button" href="index.html#newsletter" aria-label="Account">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 12C14.7 12 17 9.7 17 7C17 4.2 14.7 2 12 2C9.2 2 7 4.2 7 7C7 9.7 9.2 12 12 12Z" stroke="currentColor" stroke-width="1.6"></path>
+                <path d="M4 21C4.8 17.8 7.6 16 12 16C16.4 16 19.2 17.8 20 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </a>
+            <button class="icon-button" type="button" data-cart-toggle aria-label="Open cart">
+              <span class="cart-count" data-cart-count hidden>0</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 5H5L7.4 15.2C7.6 16.1 8.4 16.8 9.3 16.8H17.4C18.3 16.8 19.1 16.2 19.3 15.3L21 8.5H6.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="10" cy="20" r="1" fill="currentColor"></circle>
+                <circle cx="18" cy="20" r="1" fill="currentColor"></circle>
+              </svg>
+            </button>
+            <button class="icon-button hamburger" type="button" data-mobile-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
+        <ul>
+          <li><a href="shop.html">Catalog</a></li>
+          <li><a href="index.html#methods">Methods</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <main id="main-content">
+
+        <section class="hero hero--short" aria-labelledby="about-title">
+          <div class="hero__grid">
+            <div class="hero__meta">
+              <span><strong>About</strong></span>
+              <span>Pepcision · Est. 2024</span>
+            </div>
+            <h1 class="hero__headline" id="about-title">
+              We sell what we'd order ourselves.
+            </h1>
+            <div class="hero__body">
+              <p>Pepcision was started by a small team of researchers and operators tired of opaque suppliers, vague COAs, and shipments that arrived warm. The catalog is small on purpose. Each lot is documented down to the chromatogram.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-intro">
+          <div class="about-intro__lead">
+            <p class="eyebrow">Position</p>
+            <h2>A research peptide supplier that treats documentation as the product, not the packaging.</h2>
+          </div>
+          <div class="about-intro__body">
+            <p>Most research-peptide suppliers will sell you a vial. Most will even attach a COA. Few will let you trace a lot number from your hand back through the analytical chromatogram and into the synthesis record. That traceability — and the operational discipline it requires — is what we sell. Peptides are the byproduct.</p>
+          </div>
+        </section>
+
+        <section class="section section--rule">
+          <div class="container">
+            <p class="section-label"><span class="section-label__num">01</span>How we operate</p>
+            <div class="story-grid">
+              <article class="story-card">
+                <span class="story-card__num">01 / 04</span>
+                <h2>The catalog</h2>
+                <p>Forty-something SKUs across healing, secretagogue, mitochondrial, copper, and neurochemistry lines. We don't add a peptide until we can synthesize it cleanly enough to hit our 98% HPLC floor and source it from a facility we've audited. We'd rather have a short catalog with documented lots than a long one full of question marks.</p>
+              </article>
+              <article class="story-card">
+                <span class="story-card__num">02 / 04</span>
+                <h2>Synthesis &amp; QC</h2>
+                <p>SPPS is run at an ISO-audited contract facility. Crude product is HPLC-purified, then re-analyzed on an analytical column. Mass-spec confirms the observed monoisotopic mass against theoretical. If they don't match within tolerance, the lot is rejected — not relabeled, not sold at a discount.</p>
+              </article>
+              <article class="story-card">
+                <span class="story-card__num">03 / 04</span>
+                <h2>Cold chain &amp; dispatch</h2>
+                <p>Mon–Thu dispatch only, because Friday shipments sit in warehouses over the weekend and cold packs don't last that long. Each box ships with two ice packs, an insulated liner, and a temperature label. If the label trips, we replace the lot.</p>
+              </article>
+              <article class="story-card">
+                <span class="story-card__num">04 / 04</span>
+                <h2>Sales discipline</h2>
+                <p>We don't sell to anyone we can't verify. First orders go through a quick institutional or independent-researcher check. We're slower than the wild-west suppliers and we're fine with that — it's the cost of operating cleanly.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--alt team-section">
+          <div class="container">
+            <p class="section-label"><span class="section-label__num">02</span>The team</p>
+            <div class="grid-12">
+              <div style="grid-column: 1 / 8;">
+                <h2 style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 500; letter-spacing: -0.02em; margin: 0;">Small, technical, accessible.</h2>
+              </div>
+              <div style="grid-column: 9 / 13; align-self: end;">
+                <p class="text-muted">Three people run Pepcision. There is no sales department. Questions about a lot, a chromatogram, or an upcoming order go to one of the three of us directly.</p>
+              </div>
+            </div>
+            <div class="team-grid">
+              <article class="team-card">
+                <div class="team-card__avatar" aria-hidden="true">AR</div>
+                <h3>Scientific advisor</h3>
+                <p>Reviews analytical chemistry, vets new peptides, and audits the contract facility.</p>
+              </article>
+              <article class="team-card">
+                <div class="team-card__avatar" aria-hidden="true">OP</div>
+                <h3>Operations lead</h3>
+                <p>Owns sourcing, dispatch, cold-chain logistics, and the institutional verification process.</p>
+              </article>
+              <article class="team-card">
+                <div class="team-card__avatar" aria-hidden="true">QA</div>
+                <h3>Quality lead</h3>
+                <p>Owns the lot-record system, runs incoming inspection, and signs off every COA before it ships.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+      </main>
+      <footer class="footer" id="contact">
+        <div class="footer__inner">
+          <div class="footer__grid">
+            <div>
+              <h2>Pepcision</h2>
+              <p>Research peptides for laboratory use. Documented, lot-traceable, cold-chained.</p>
+              <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55);">orders@pepcision.com</p>
+            </div>
+            <div class="footer-links">
+              <h3>Catalog</h3>
+              <ul>
+                <li><a href="shop.html">All products</a></li>
+                <li><a href="shop.html">Healing</a></li>
+                <li><a href="shop.html">Secretagogues</a></li>
+                <li><a href="shop.html">Mitochondrial</a></li>
+                <li><a href="shop.html">Copper peptides</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="shipping.html">Shipping</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="shipping.html">Shipping policy</a></li>
+                <li><a href="refund-policy.html">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>For laboratory research use only. Not for human, veterinary, or diagnostic use.</p>
+            <p>© 2026 Pepcision · By entering you affirm you are 21+ and a qualified researcher.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
