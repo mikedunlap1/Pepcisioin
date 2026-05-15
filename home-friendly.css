@@ -1,0 +1,235 @@
+/* =========================================================
+   Pepcision Friendly Homepage Overrides
+   ========================================================= */
+
+:root {
+  --friendly-blue: #1677ea;
+  --friendly-blue-soft: #eef6ff;
+  --friendly-text: #334155;
+  --friendly-border: #d7e3f0;
+  --friendly-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+
+  --friendly-radius: 24px;
+  --friendly-radius-sm: 999px;
+}
+
+/* =========================================
+   GLOBAL TONE
+========================================= */
+
+body.page-home {
+  color: var(--friendly-text);
+  background: #ffffff;
+}
+
+.page-home h1,
+.page-home h2,
+.page-home h3 {
+  color: #27364b;
+  font-family: "Switzer", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.page-home p {
+  color: var(--friendly-text);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.page-home .site-header {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(215,227,240,0.8);
+  box-shadow: var(--friendly-shadow);
+}
+
+.page-home .brand__text strong {
+  color: var(--friendly-blue);
+  font-family: "Switzer", sans-serif;
+  font-weight: 700;
+}
+
+.page-home .brand__text p {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.page-home .btn {
+  border-radius: var(--friendly-radius-sm);
+  min-height: 3rem;
+  padding-inline: 1.5rem;
+  transition: all 180ms ease;
+}
+
+.page-home .btn--primary {
+  background: var(--friendly-blue);
+  border-color: var(--friendly-blue);
+}
+
+.page-home .btn--primary:hover {
+  background: #0f67cf;
+  border-color: #0f67cf;
+  transform: translateY(-1px);
+}
+
+.page-home .btn--ghost {
+  border-color: #94a3b8;
+  color: #475569;
+  background: #fff;
+}
+
+.page-home .btn--ghost:hover {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.page-home .hero {
+  background: var(--friendly-blue-soft);
+  border-bottom: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.page-home .hero__grid {
+  align-items: center;
+}
+
+.page-home .hero__headline {
+  grid-column: 1 / 7;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  color: #24364a;
+}
+
+.page-home .hero__headline em {
+  color: var(--friendly-blue);
+  font-style: normal;
+}
+
+.page-home .hero__body {
+  grid-column: 1 / 6;
+  align-self: start;
+}
+
+.page-home .hero__body p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 34ch;
+}
+
+.page-home .hero__sidebar {
+  grid-column: 8 / 13;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08), rgba(255,255,255,0.08)),
+    url('https://images.unsplash.com/photo-1583912267550-d4bcddf1fb73?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  border-radius: 36px;
+  min-height: 700px;
+  padding: 2rem;
+  justify-content: flex-end;
+  overflow: hidden;
+  box-shadow: var(--friendly-shadow);
+}
+
+.page-home .hero__sidebar div {
+  background: rgba(255,255,255,0.9);
+  border-radius: 18px;
+  padding: 1rem 1.2rem;
+  backdrop-filter: blur(8px);
+}
+
+.page-home .hero__meta {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* =========================================
+   LIGHTER SECTIONS
+========================================= */
+
+.page-home .section--alt {
+  background: #f7fbff;
+}
+
+.page-home .spec-strip {
+  background: #ffffff;
+  border-top: 0;
+}
+
+.page-home .spec-strip__inner {
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.page-home .spec-strip__cell {
+  background: #fff;
+  border: 1px solid var(--friendly-border);
+  border-radius: 24px;
+  padding: 2rem;
+}
+
+.page-home .spec-strip__cell + .spec-strip__cell {
+  border-left: 1px solid var(--friendly-border);
+}
+
+/* =========================================
+   PRODUCT CARDS
+========================================= */
+
+.page-home .product-card__image,
+.page-home .editorial-row__media,
+.page-home .team-card,
+.page-home .story-card {
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.page-home .product-card__image {
+  border: 0;
+  box-shadow: var(--friendly-shadow);
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+.page-home .link-inline,
+.page-home .link-arrow,
+.page-home .product-card__cta {
+  color: var(--friendly-blue);
+  border-color: rgba(22,119,234,0.3);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .page-home .hero__headline,
+  .page-home .hero__body,
+  .page-home .hero__sidebar {
+    grid-column: 1 / -1;
+  }
+
+  .page-home .hero__sidebar {
+    min-height: 420px;
+  }
+
+  .page-home .hero__headline {
+    font-size: 3.5rem;
+  }
+}
