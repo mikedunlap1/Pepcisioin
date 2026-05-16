@@ -1,6 +1,3 @@
-# `index.html`
-
-```html
 <!DOCTYPE html>
 <html lang="en"> 
   <head>
@@ -106,8 +103,11 @@
               <span>Last revised — Apr 2026</span>
             </div>
             <h1 class="hero__headline" id="hero-title">
-              Research peptides<br>you can actually<br><em>trust</em>.
+              Research-ready<br>Peptides, for<br><em>Any Size Lab</em>.
             </h1>
+            <div class="hero__hero-image-mobile">
+              <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=900&q=82" alt="Smiling scientist in laboratory">
+            </div>
             <div class="hero__body">
               <p>Pepcision supplies lyophilized research peptides to academic and industrial laboratories. Every lot ships with a third-party COA, HPLC purity trace, and mass-spec confirmation — referenced by lot number, not aggregate claim.</p>
               <div class="hero__actions">
@@ -158,30 +158,3 @@
     </div>
   </body>
 </html>
-```
-
-# `home-friendly.css`
-
-```css
-.page-home .hero__sidebar {
-  grid-column: 8 / 13;
-  grid-row: 1 / span 3;
-  min-height: clamp(520px, 58vw, 690px);
-  padding: 1.6rem;
-  justify-content: flex-end;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04)),
-    url("https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1200&q=82");
-  background-size: cover;
-  background-position: center;
-  border-radius: 34px;
-  box-shadow: var(--friendly-shadow);
-  overflow: hidden;
-}
-
-/* Replace any missing/broken inline product or editorial image with this */
-
-img.missing-scientist-image {
-  content: url("https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=900&q=82");
-}
-```
