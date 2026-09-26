@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="39" viewBox="0 0 57 39">
+  <title>United States flag</title>
+  <defs>
+    <path id="star" d="M0 -1.2 .27 -.37 1.14 -.37 .44 .14 .71 .97 0 .46 -.71 .97 -.44 .14 -1.14 -.37 -.27 -.37Z" fill="#fff"/>
+    <g id="six"><use href="#star" x="2.2"/><use href="#star" x="6.6"/><use href="#star" x="11"/><use href="#star" x="15.4"/><use href="#star" x="19.8"/><use href="#star" x="24.2"/></g>
+    <g id="five"><use href="#star" x="4.4"/><use href="#star" x="8.8"/><use href="#star" x="13.2"/><use href="#star" x="17.6"/><use href="#star" x="22"/></g>
+  </defs>
+  <path fill="#fff" d="M0 0h57v39H0z"/>
+  <path stroke="#b22234" stroke-width="3" d="M0 1.5h57M0 7.5h57M0 13.5h57M0 19.5h57M0 25.5h57M0 31.5h57M0 37.5h57"/>
+  <path fill="#3c3b6e" d="M0 0h26.4v21H0z"/>
+  <use href="#six" y="2.1"/><use href="#five" y="4.2"/><use href="#six" y="6.3"/><use href="#five" y="8.4"/><use href="#six" y="10.5"/><use href="#five" y="12.6"/><use href="#six" y="14.7"/><use href="#five" y="16.8"/><use href="#six" y="18.9"/>
+</svg>
