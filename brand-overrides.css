@@ -1,0 +1,39 @@
+/* The original mark and lettering are isolated so recoloring cannot bleed into the P. */
+.logo { display:inline-flex; flex:0 0 auto; line-height:1; }
+.brand-lockup { display:block; position:relative; width:270px; aspect-ratio:2004 / 376; }
+.brand-symbol, .brand-wordmark, .brand-descriptor { position:absolute; display:block; }
+.brand-symbol, .brand-wordmark, .brand-descriptor > span { background-image:url("assets/pepcision-logo.png"); background-repeat:no-repeat; }
+.brand-symbol { left:0; top:0; width:17.166%; height:100%; background-size:631.395% 192.553%; background-position:4.595% 51.724%; }
+.brand-wordmark { left:21.008%; top:6.915%; width:78.992%; height:55.053%; background-size:137.208% 349.758%; background-position:85.739% 39.845%; }
+/* Align the visible letter edges, accounting for padding inside the original artwork. */
+.brand-descriptor { left:21.158%; top:71.277%; width:78.692%; height:28.989%; display:flex; justify-content:space-between; }
+.brand-descriptor > span { display:block; height:100%; flex:0 0 auto; background-position-y:72.846%; background-size:auto 664.220%; }
+.brand-letter-1 { aspect-ratio:82 / 109; background-position-x:24.354%; }
+.brand-letter-2 { aspect-ratio:77 / 109; background-position-x:32.983%; }
+.brand-letter-3 { aspect-ratio:82 / 109; background-position-x:41.770%; }
+.brand-letter-4 { aspect-ratio:83 / 109; background-position-x:50.120%; }
+.brand-letter-5 { aspect-ratio:17 / 109; background-position-x:57.216%; }
+.brand-letter-6 { aspect-ratio:91 / 109; background-position-x:65.305%; }
+.brand-letter-7 { aspect-ratio:75 / 109; background-position-x:74.201%; }
+.brand-letter-8 { aspect-ratio:82 / 109; background-position-x:83.158%; }
+.footer .brand-lockup { width:250px; }
+.footer .brand-wordmark, .footer .brand-descriptor { filter:brightness(0) invert(1); }
+
+.topbar .container { min-height:76px; padding-block:14px; display:flex; flex-wrap:wrap; gap:8px 18px; font-size:15px; font-weight:600; line-height:1.3; letter-spacing:.035em; }
+.topbar .topbar-item { display:inline-flex; align-items:center; gap:12px; }
+.topbar strong { font-weight:700; color:#fff; }
+.topbar .flag { display:block; width:38px; height:26px; flex:0 0 auto; border:1px solid #ffffff40; }
+.topbar .topbar-notice { color:var(--cyan); }
+
+.bottle-stage { position:relative; overflow:hidden; }
+.bottle-stage img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.bottle-stage::before, .bottle-stage::after { content:none; }
+.card-visual { overflow:hidden; padding:0; }
+.card-visual img { width:100%; height:100%; object-fit:cover; }
+
+@media(max-width:700px) {
+  .brand-lockup, .footer .brand-lockup { width:230px; }
+  .topbar .container { gap:8px 12px; font-size:13px; padding-block:12px; }
+  .topbar .topbar-item:first-child { flex-basis:100%; justify-content:center; font-size:15px; }
+  .topbar .flag { width:34px; height:23px; }
+}
