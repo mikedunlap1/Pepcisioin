@@ -53,7 +53,7 @@ textarea { width:100%; min-height:46px; max-height:85px; resize:vertical; border
 footer { padding:7px 18px 16px; font-size:11px; line-height:1.4; color:#566b7e; }
 footer div { display:flex; align-items:center; gap:12px; margin-top:9px; flex-wrap:wrap; }
 .clear { color:#526782; background:none; border:0; font-size:11px; padding:0; text-decoration:underline; }
-@media(max-width:500px) { .launcher { right:16px; bottom:16px; } .panel { right:8px; bottom:80px; width:calc(100vw - 16px); height:min(720px,calc(100dvh - 96px)); } header { padding:16px 18px; } }
+@media(max-width:500px) { .launcher { right:16px; bottom:16px; } .panel { right:8px; bottom:80px; width:calc(100% - 16px); height:min(720px,calc(100dvh - 96px)); } header { padding:16px 18px; } }
 @media(max-height:650px) { .panel { bottom:8px; height:calc(100dvh - 16px); } header { padding:12px 18px; } .topics { padding-block:6px; } footer { font-size:10px; padding-bottom:10px; } }
 @media(prefers-reduced-motion:reduce) { .bubble,.typing-dots span,.send.waiting::after { animation:none; } }
 @media(prefers-reduced-motion:reduce) { .launcher,.launcher-label { transition:none; } }
