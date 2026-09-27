@@ -8,6 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pages = [
   ...fs.readdirSync(root).filter(name => name.endsWith('.html')),
   ...fs.readdirSync(path.join(root, 'products')).filter(name => name.endsWith('.html')).map(name => 'products/' + name),
+  ...fs.readdirSync(path.join(root, 'chat')).filter(name => name.endsWith('.html')).map(name => 'chat/' + name),
 ];
 let referenceCount = 0;
 const ids = new Map(pages.map(file => {
@@ -30,7 +31,7 @@ for (const file of pages) {
   for (const match of html.matchAll(/(?:src|href)="([^"]+)"/g)) checkReference(file, match[1]);
   assert(!/(?:pat[A-Za-z0-9]{12,}\.[a-f0-9]{20,}|gh[pousr]_[A-Za-z0-9]{20,})/.test(html), file + ': possible credential');
 }
-for (const file of ['styles.css', 'brand-overrides.css']) {
+for (const file of ['styles.css', 'brand-overrides.css', 'chat/widget.css', 'chat/admin.css']) {
   const css = fs.readFileSync(path.join(root, file), 'utf8');
   for (const match of css.matchAll(/url\(["']?([^)"']+)["']?\)/g)) checkReference(file, match[1]);
 }

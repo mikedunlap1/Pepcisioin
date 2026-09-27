@@ -1,0 +1,16 @@
+.admin { max-width:1120px; margin:50px auto; padding:24px; }
+.admin>.eyebrow { margin-top:40px; }
+#login { display:flex; gap:12px; align-items:end; flex-wrap:wrap; max-width:680px; }
+#login label { flex-basis:100%; }
+#token { flex:1; padding:12px; border:1px solid #b7c9d8; border-radius:8px; min-width:180px; }
+#status { padding-block:20px; color:#6c3d17; }
+.toolbar { display:flex; gap:16px; align-items:center; margin-bottom:18px; flex-wrap:wrap; }
+#summary { margin-right:auto; }
+button { cursor:pointer; padding:8px 14px; border:1px solid #b7c9d8; border-radius:8px; background:#fff; color:#10223d; }
+button:disabled { opacity:.6; cursor:wait; }
+.table-wrap { overflow:auto; }
+table { width:100%; border-collapse:collapse; font-size:15px; }
+th,td { padding:15px; text-align:left; border-bottom:1px solid #dce7ee; }
+th { background:#edf7fb; }
+#older { margin-top:20px; }
+[hidden] { display:none!important; }
