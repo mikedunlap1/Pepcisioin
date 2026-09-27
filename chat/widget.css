@@ -1,0 +1,60 @@
+:host { all:initial; font-family:"Source Sans 3","Segoe UI",sans-serif; color:#10223d; font-size:15px; line-height:1.5; }
+* { box-sizing:border-box; }
+button,textarea { font:inherit; }
+button,a,textarea { -webkit-tap-highlight-color:transparent; }
+button { cursor:pointer; }
+button:disabled { cursor:wait; opacity:.55; }
+button:focus-visible,a:focus-visible,textarea:focus-visible,[tabindex]:focus-visible { outline:3px solid #2579c7; outline-offset:3px; }
+[hidden] { display:none!important; }
+.launcher { position:fixed; bottom:24px; right:24px; z-index:9999; width:58px; height:58px; padding:0; overflow:hidden; border:1px solid #ffffff40; border-radius:999px; background:#10223d; color:#fff; box-shadow:0 8px 30px #10223d40; font-weight:700; transition:width .24s ease,box-shadow .24s ease; }
+.launcher-icon { position:absolute; width:26px; height:26px; right:15px; top:15px; color:#8bd8ed; }
+.launcher-label { position:absolute; left:20px; top:0; height:56px; display:flex; align-items:center; white-space:nowrap; opacity:0; transform:translateX(8px); pointer-events:none; transition:opacity .15s ease,transform .24s ease; }
+.launcher:focus-visible { width:174px; box-shadow:0 10px 34px #10223d50; }
+.launcher:focus-visible .launcher-label { opacity:1; transform:translateX(0); }
+@media(hover:hover) { .launcher:hover { width:174px; box-shadow:0 10px 34px #10223d50; } .launcher:hover .launcher-label { opacity:1; transform:translateX(0); } }
+.panel { position:fixed; z-index:10000; right:24px; bottom:90px; width:390px; height:min(720px,calc(100dvh - 110px)); display:flex; flex-direction:column; background:white; border:1px solid #dce7ee; border-radius:22px; overflow:hidden; box-shadow:0 22px 70px #10223d35; }
+.panel > :not(.messages) { flex-shrink:0; }
+header { background:#10223d; color:#fff; padding:22px 22px 19px; display:flex; justify-content:space-between; gap:12px; }
+.eyebrow { font-size:11px; letter-spacing:.17em; color:#8bd8ed; font-weight:700; }
+h2 { font-family:Barlow,"Arial Narrow",sans-serif; font-size:26px; line-height:1.1; margin:6px 0; }
+.subtitle { color:#c1d2e5; font-size:13px; }
+.close { align-self:flex-start; background:transparent; color:#fff; border:1px solid #ffffff40; border-radius:50%; width:34px; height:34px; font-size:24px; line-height:1; }
+.notice { padding:10px 22px; background:#edf7fb; font-size:12px; color:#324e6e; }
+.messages { flex:1; overflow:auto; min-height:0; padding:18px 16px 4px; overscroll-behavior:contain; background:#f6f9fc; scrollbar-width:thin; scroll-padding:14px; }
+.bubble { width:fit-content; max-width:calc(100% - 24px); margin:0 0 18px; border-radius:16px 16px 16px 4px; padding:13px 15px; background:white; border:1px solid #e1e9f0; overflow-wrap:anywhere; box-shadow:0 2px 4px #10223d04; animation:message-in .24s ease-out; }
+.bubble.user { background:#1e65a6; color:white; margin-left:auto; border-color:#1e65a6; border-radius:16px 16px 4px 16px; }
+.bubble.user .speaker { color:#dfedff; }
+.delivery { display:block; font-size:11px; margin-top:8px; color:#dfedff; text-align:right; }
+.bubble.failed { border-color:#c06841; }
+.typing { min-width:190px; }
+.typing-row { display:flex; align-items:center; gap:10px; padding-top:9px; color:#526782; font-size:12px; }
+.typing-dots { display:flex; gap:4px; align-items:center; height:18px; }
+.typing-dots span { width:6px; height:6px; border-radius:50%; background:#2579c7; animation:typing-dot 1.1s ease-in-out infinite; }
+.typing-dots span:nth-child(2) { animation-delay:.15s; }
+.typing-dots span:nth-child(3) { animation-delay:.3s; }
+@keyframes message-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@keyframes typing-dot { 0%,60%,100% { opacity:.4; transform:translateY(0); } 30% { opacity:1; transform:translateY(-4px); } }
+.speaker { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#526782; }
+.bubble p { margin:5px 0 0; font-size:14px; white-space:pre-wrap; }
+a { color:#185f9e; text-decoration:underline; text-underline-offset:3px; font-size:12px; }
+.bubble a { display:inline-block; margin-top:10px; }
+.topics { display:flex; flex-wrap:wrap; gap:7px; padding:10px 18px 14px; }
+.topics button { padding:7px 11px; background:white; color:#185f9e; border:1px solid #c7deee; border-radius:20px; font-size:12px; }
+form { padding:14px 18px 8px; border-top:1px solid #e6edf2; }
+label { font-size:12px; font-weight:700; display:block; margin-bottom:6px; }
+.input-row { display:flex; gap:8px; align-items:center; }
+textarea { width:100%; min-height:46px; max-height:85px; resize:vertical; border:1px solid #c7d6e1; border-radius:12px; padding:10px; color:#10223d; font-size:14px; background:white; }
+.send { background:#2579c7; color:white; border:0; border-radius:50%; flex:0 0 42px; height:42px; font-size:24px; }
+.send.waiting { font-size:0; opacity:1; background:#e7eff7; }
+.send.waiting::after { content:''; display:block; width:16px; height:16px; margin:auto; border:2px solid #bacfe1; border-top-color:#2579c7; border-radius:50%; animation:send-wait .8s linear infinite; }
+@keyframes send-wait { to { transform:rotate(360deg); } }
+.status { font-size:12px; color:#6c3d17; margin-top:6px; }
+.status:empty { display:none; }
+footer { padding:7px 18px 16px; font-size:11px; line-height:1.4; color:#566b7e; }
+footer div { display:flex; align-items:center; gap:12px; margin-top:9px; flex-wrap:wrap; }
+.clear { color:#526782; background:none; border:0; font-size:11px; padding:0; text-decoration:underline; }
+@media(max-width:500px) { .launcher { right:16px; bottom:16px; } .panel { right:8px; bottom:80px; width:calc(100% - 16px); height:min(720px,calc(100dvh - 96px)); } header { padding:16px 18px; } }
+@media(max-height:650px) { .panel { bottom:8px; height:calc(100dvh - 16px); } header { padding:12px 18px; } .topics { padding-block:6px; } footer { font-size:10px; padding-bottom:10px; } }
+@media(prefers-reduced-motion:reduce) { .bubble,.typing-dots span,.send.waiting::after { animation:none; } }
+@media(prefers-reduced-motion:reduce) { .launcher,.launcher-label { transition:none; } }
+@media(max-width:500px) { textarea { font-size:16px; } .launcher { bottom:max(16px,env(safe-area-inset-bottom)); } }

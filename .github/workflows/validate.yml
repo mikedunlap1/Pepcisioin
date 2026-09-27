@@ -1,4 +1,4 @@
-name: Validate static site
+name: Validate site and chat security
 on:
   pull_request:
   push:
@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
-      - run: node scripts/validate.mjs
+          node-version: '24.13.1'
+      - run: npm run check
